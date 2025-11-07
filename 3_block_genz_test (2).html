@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainrot Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      scroll-behavior: smooth;
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+    #block1 {
+      background: linear-gradient(135deg, #ff3cac, #784ba0, #2b86c5);
+    }
+    #block2 {
+      background: linear-gradient(135deg, #4158D0, #C850C0, #FFCC70);
+    }
+    #block3 {
+      background: linear-gradient(135deg, #F7971E, #FFD200);
+    }
+    #block4 {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    button {
+      background: white;
+      color: black;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-size: 1rem;
+      margin-top: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    .big-text {
+      font-size: 6rem;
+      font-weight: 800;
+      text-shadow: 3px 3px 15px rgba(0,0,0,0.4);
+    }
+    .achievement {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.3);
+      padding: 30px 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      animation: popUp 1.5s ease;
+    }
+    @keyframes popUp {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <section id="block1">
+    <h1>Test yourself!</h1>
+    <p>This brief questionnaire will help you know how brainrotted you are.</p>
+    <button onclick="document.getElementById('block2').scrollIntoView({behavior: 'smooth'});">Continue</button>
+  </section>
+
+  <section id="block2">
+    <h1>Enter your info</h1>
+    <form onsubmit="event.preventDefault(); document.getElementById('block3').scrollIntoView({behavior: 'smooth'});">
+      <input type="text" placeholder="Enter your name" required style="padding:10px; border-radius:8px; border:none; margin:10px;">
+      <input type="number" placeholder="Enter your age" required style="padding:10px; border-radius:8px; border:none; margin:10px;">
+      <input type="password" placeholder="Enter a fake password 😉" required style="padding:10px; border-radius:8px; border:none; margin:10px;">
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="block3">
+    <div class="big-text">YOU ARE DUMB EHEHEHHEHE</div>
+    <button onclick="document.getElementById('block4').scrollIntoView({behavior: 'smooth'});">Next</button>
+  </section>
+
+  <section id="block4">
+    <div class="achievement">
+      <h2>🏆 Achievement Unlocked:</h2>
+      <p>After careful analysis, your brain has officially clocked out.</p>
+    </div>
+  </section>
+</body>
+</html>
